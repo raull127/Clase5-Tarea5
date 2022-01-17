@@ -28,12 +28,12 @@ console.log(arrayConvertido);
 
 function calcularPromedio(arrayObjetivo) {
     let sumaNumeros = 0;
-    for (let i = 1; i < arrayObjetivo.length; i++) {
+    for (let i = 0; i < arrayObjetivo.length; i++) {
         sumaNumeros = sumaNumeros + arrayObjetivo[i];
-        console.log(sumaNumeros)
+        /// console.log(sumaNumeros)
     }
     const promedioNumeros = sumaNumeros / arrayObjetivo.length;
-    console.log(promedioNumeros)
+    /// console.log(promedioNumeros)
     const mensaje = document.querySelector("#mensaje-0");
     mensaje.textContent = promedioNumeros;
 
