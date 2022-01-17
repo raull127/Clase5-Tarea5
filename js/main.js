@@ -23,7 +23,7 @@ let arrayConvertido = convertirAArray(nodoAConvertir);
 
 console.log(arrayConvertido);
 
-/////
+////////
 
 
 function calcularPromedio(arrayObjetivo) {
