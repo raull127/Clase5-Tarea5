@@ -1,1 +1,59 @@
+html {
+    background-color: rgb(42, 43, 64);
+    color: azure;
+    font-family: helvetica, arial;
+}
 
+h1 {
+    text-shadow: 1px 1px 3px lightgray;
+}
+
+#listado-numeros-columna {
+    column-count: 2;
+    column-gap: 150px;
+    width: fit-content;
+    background-color: rgb(67 68 90);
+    border-radius: 5px;
+    padding-right: 30px;
+    padding-block-start: 10px;
+    padding-block-end: 10px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    column-rule: 1px solid lightgray;
+  }
+
+#titulo-columna {
+    font-weight: bold;
+    background-color: rgb(67 68 90);
+    border-radius: 5px;
+    padding-right: 30px;
+    width: 226px;
+    margin-block-end: -16px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding-block-start: 10px;
+    text-align: center;
+    
+  }
+
+.resultado-operaciones {
+    background-color: rgb(67 68 90);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+#mensaje-de-boton {
+    font-size: 15px;
+}
+
+#boton-calcular {
+    margin-left: 0px;
+    padding: 5px;
+    border-radius: 8px;
+    border-bottom-color: darkgray;
+    border-top-color: aliceblue;
+    border-left-color: aliceblue;
+    border-right-color: darkgray;
+    background-color: lightgray;
+    font-family: monospace;
+}

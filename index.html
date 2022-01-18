@@ -13,39 +13,51 @@
 <body>
 
     <header>
-        <h1>Hola!</h1>
-      </header>
+        <h1> Buenas:</h1>
+    </header>
 
-    <ol id="listado-numeros">
-        <li>9</li>
+    <div id="titulo-columna">
+        Lista de Numeros:
+    </div>
+
+    <ul id="listado-numeros-columna">
+
+        <li>25</li>
         <li>6</li>
         <li>10</li>
-        <li>12</li>
+        <li>15</li>
         <li>10</li>
         <li>6</li>
-        <li>10</li>
-        <li>6</li>
+        <li>4</li>
+        <li>15</li>
         <li>5</li>
         <li>10</li>
-        <li>10</li>
-    </ol>
-    <!--  
-    // Crear una lista de <ol> y <li> que contengan sólo números.
-    // Convertir esos números a un array y:
-    // 1. calcular el promedio y mostrarlo en un <em> pre-creado con el texto "El promedio es..."
-    // 2. obtener el número más pequeño y mostrarlo en un <em> pre-creado con el texto "El número más pequeño es..."
-    // 3. obtener el número más grande y mostrarlo en un <em> pre-creado con el texto "El número más grande es..."
-    // 4. obtener el número que más se repite y mostrarlo en un <em> pre-creado con el texto "El número más frecuente es..."
-    -->
-    <div>
-        El número promedio es... <br>
-        <em id="mensaje-0"></em> <br>
-        El número más pequeño es... <br>
-        <em id="mensaje-1"></em> <br>
-        El número más grande es... <br>
-        <em id="mensaje-2"></em> <br>
-        El número más frecuente es... <br>
-        <em id="mensaje-3"></em> <br>
+
+    </ul>
+
+    <div id="mensaje-de-boton">
+        Presiona para calcular el promedio, menor, mayor y numero más repetido...<br><br>
+        <input type="button" value="Procesar" id="boton-calcular"> 
+    </div>
+
+    <div id="resultados" hidden="true">
+        <br>
+        El número promedio es...
+        <br> <br>
+        <em id="mensaje-0" class="resultado-operaciones" ></em>
+        <br>
+        <br> El número más pequeño es...
+        <br> <br>
+        <em id="mensaje-1" class="resultado-operaciones" ></em>
+        <br>
+        <br> El número más grande es...
+        <br> <br>
+        <em id="mensaje-2" class="resultado-operaciones" ></em>
+        <br>
+        <br> El número más frecuente es...
+        <br> <br>
+        <em id="mensaje-3" class="resultado-operaciones" ></em>
+        <br>
     </div>
 
     <script src='js/main.js'></script>
