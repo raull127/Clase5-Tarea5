@@ -8,14 +8,18 @@
 // 4. obtener el número que más se repite y mostrarlo en un <em> pre-creado con el texto "El número más frecuente es..."
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
 document.querySelector("#boton-calcular").onclick = function () {
-    calcularPromedio(arrayConvertido);
-    sacarMenorNumero(arrayConvertido);
-    sacarMayorNumero(arrayConvertido);
-    sacarNumeroRepetido(arrayConvertido);
+    document.querySelector("#mensaje-0").textContent = calcularPromedio(arrayConvertido);
+    document.querySelector("#mensaje-1").textContent = obtenerMenorNumero(arrayConvertido);
+    document.querySelector("#mensaje-2").textContent = obtenerMayorNumero(arrayConvertido);
+    document.querySelector("#mensaje-3").textContent = obtenerNumeroRepetido(arrayConvertido);
     document.querySelector("#resultados").hidden = false;
-    return "calculao";
+    return "calculado";
 }
+/////////////////////////////////////////////////////////////////////////////////
 
 const convertirAArray = function (elementoLlamado) {
     const nodeListNumeros = elementoLlamado;
@@ -27,8 +31,7 @@ const convertirAArray = function (elementoLlamado) {
 }
 let nodoAConvertir = document.querySelectorAll("li");
 let arrayConvertido = convertirAArray(nodoAConvertir);
-
-//////
+/////////////////////////////////////////////////////////////////////////////////
 
 function calcularPromedio(arrayObjetivo) {
     let sumaNumeros = 0;
@@ -36,30 +39,22 @@ function calcularPromedio(arrayObjetivo) {
         sumaNumeros += arrayObjetivo[i];
     }
     let promedioNumeros = (sumaNumeros / arrayObjetivo.length).toFixed(2);
-    const mensaje = document.querySelector("#mensaje-0");
-    mensaje.textContent = promedioNumeros;
     return promedioNumeros;
 }
+/////////////////////////////////////////////////////////////////////////////////
 
-
-///// 
-
-function sacarMenorNumero(arrayObjetivo) {
+function obtenerMenorNumero(arrayObjetivo) {
     let numeroBase = arrayObjetivo[0];
     for (let i = 0; i < arrayObjetivo.length; i++) {
         if (arrayObjetivo[i] < numeroBase) {
             numeroBase = arrayObjetivo[i];
         }
     }
-    const mensaje = document.querySelector("#mensaje-1");
-    mensaje.textContent = numeroBase;
     return numeroBase;
 }
+/////////////////////////////////////////////////////////////////////////////////
 
-
-////
-
-function sacarMayorNumero(arrayObjetivo) {
+function obtenerMayorNumero(arrayObjetivo) {
     let numeroBase = 0;
     for (let i = 0; i < arrayObjetivo.length; i++) {
         let numeroCirculando = arrayObjetivo[i];
@@ -67,15 +62,11 @@ function sacarMayorNumero(arrayObjetivo) {
             numeroBase = numeroCirculando;
         }
     }
-    const mensaje = document.querySelector("#mensaje-2");
-    mensaje.textContent = numeroBase;
     return numeroBase;
 }
+/////////////////////////////////////////////////////////////////////////////////
 
-
-///////////
-
-function sacarNumeroRepetido(arrayObjetivo) {
+function obtenerNumeroRepetido(arrayObjetivo) {
     let numeroRepetido;
     let contador = 0;
     let contadorMaximo = 0;
@@ -91,11 +82,8 @@ function sacarNumeroRepetido(arrayObjetivo) {
         }
         contador = 0;
     }
-    const mensaje = document.querySelector("#mensaje-3");
-    mensaje.textContent = numeroRepetido;
+    return numeroRepetido;
 }
 
-
-
-
+/////////////////////////////////////////////////////////////////////////////////
 
